@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar h1{
+  text-align: center;
+  color: #653239;
+}
+
+.home{
+  display: flex;
+  width: 100%;
+}
+
+.leftcolumn, .rightcolumn{
+  width: 50% ;
+  padding: 3% 2% ;
+}
+
+/* task previews / list */
+.task-preview {
+  background-color: #E2D4BA;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.task-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.task-preview h3 {
+  font-size: 20px;
+  color: #653239 ;
+  margin-bottom: 8px;
+}
+
+.task-preview p{
+  color: #653239 ;
+}
+
+.task-preview button, .todoform button {
+  padding: 10px;
+  background-color: #AF7A6D ;
+  color:white;
+  border: 0;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+}
+
+/* to do form */
+.todoform{
+  color: #653239 ;
+  padding: 10px 16px;
+  background-color: #E2D4BA;
+  border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -ms-border-radius: 10px ;
+  -o-border-radius: 10px ;
+}
+
