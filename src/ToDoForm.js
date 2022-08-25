@@ -44,8 +44,8 @@ const ToDoForm = ({tasks, setTasks}) => {
                     value={taskStatus}
                     onChange={(e) => setTaskStatus(e.target.value)}
                 >
-                    <option value="inprogress">In progress</option>
-                    <option value="completed">Completed</option>
+                    <option value="In progress">In progress</option>
+                    <option value="Completed">Completed</option>
                 </select>
                 <button>Add Task</button>
             </form>
