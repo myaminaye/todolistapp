@@ -1,21 +1,54 @@
-const ToDoForm = (tasks, handleAddTask) => {
+import { useState } from "react";
+
+const ToDoForm = (tasks, setTasks) => {
+
+    const [taskName, setTaskName]= useState('');
+    const [dueDate, setDueDate]= useState('');
+    const [taskStatus, setTaskStatus] = useState('Orange');
+    var id = 3;
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        id++;
+        const task = {taskName, dueDate, taskStatus, id};
+
+        console.log(task);
+        console.log(tasks);
+        const newTasks = tasks.push(task);
+        setTasks = newTasks;
+        console.log(newTasks);
+       
+    }
+
     return ( 
         <div className="todoform">
             <h2>You can add new task here</h2>
-            <form>
-                <label for="newtask">Task name: </label>
-                <input type="text" id="newtask" name="newtask"></input><br/><br/>
-                
-                <label for="newduedate">Due Date: </label>
-                <input type="text" id="newduedate" name="duedate"></input><br/><br/>
+            <form onSubmit={handleSubmit}>
+                <label>Task Name:</label>
+                <input 
+                    type="text" 
+                    required 
+                    value={taskName}
+                    onChange={(e) => setTaskName(e.target.value)}
+                />
 
-                <label for="newstatus">Choose a status: </label>
-                <select name="newstatus" id="newstatus">
-                    <option value="Green">Finish</option>
-                    <option value="Orange">Pending</option>
-                </select> <br/><br/>
+                <label>Due Date:</label>
+                <input 
+                    type="text" 
+                    required 
+                    value={dueDate}
+                    onChange={(e) => setDueDate(e.target.value)}
+                />
 
-                <button onClick={()=>{handleAddTask()}}>Add Task</button>
+                <label>Task Status:</label>
+                <select
+                    value={taskStatus}
+                    onChange={(e) => setTaskStatus(e.target.value)}
+                >
+                    <option value="orange">orange</option>
+                    <option value="green">green</option>
+                </select>
+                <button>Add Task</button>
             </form>
         </div>
      );

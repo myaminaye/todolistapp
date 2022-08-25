@@ -14,18 +14,13 @@ const Home = () => {
         setTasks(newTasks);
     }
 
-    const handleAddTask = (taskId) =>{
-        const addedTasks = tasks.
-        set
-    }
-
     return ( 
         <div className="home">
-            <div className="leftcolumn">
+            <div className="col-6">
                 <TdList tasks={tasks} handleDelete={handleDelete} />
             </div>
-            <div className="rightcolumn">
-                <ToDoForm tasks={tasks} handleAddTask={handleAddTask} />
+            <div className="col-6">
+                <ToDoForm tasks={tasks} setTasks={setTasks} />
             </div>
             
         </div>

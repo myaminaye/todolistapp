@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -12,26 +13,27 @@ code {
     monospace;
 }
 
+.navbar{
+  background-color: #FFE2E2 ;
+}
+
 .navbar h1{
-  text-align: center;
-  color: #653239;
+  margin: 10px auto;
+  color: #8785A2;
 }
 
 .home{
   display: flex;
   width: 100%;
-}
-
-.leftcolumn, .rightcolumn{
-  width: 50% ;
-  padding: 3% 2% ;
+  background-color: #FFE2E2 ;
 }
 
 /* task previews / list */
 .task-preview {
-  background-color: #E2D4BA;
+  background-color: #F6F6F6;
   padding: 10px 16px;
   margin-bottom: 10px;
+  margin: 2% 5%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -45,31 +47,38 @@ code {
 
 .task-preview h3 {
   font-size: 20px;
-  color: #653239 ;
+  color: #8785A2 ;
   margin-bottom: 8px;
 }
 
 .task-preview p{
-  color: #653239 ;
+  color: #8785A2 ;
 }
 
 .task-preview button, .todoform button {
   padding: 10px;
-  background-color: #AF7A6D ;
-  color:white;
+  background-color: #FFC7C7 ;
+  color:#8785A2;
   border: 0;
   border-radius:10px;
   -webkit-border-radius:10px;
   -moz-border-radius:10px;
   -ms-border-radius:10px;
   -o-border-radius:10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #8785A2 ;
+  color:#FFC7C7;
 }
 
 /* to do form */
 .todoform{
-  color: #653239 ;
+  color: #8785A2 ;
   padding: 10px 16px;
-  background-color: #E2D4BA;
+  margin: 2% 5%;
+  background-color: #F6F6F6;
   border-radius: 10px ;
   -webkit-border-radius: 10px ;
   -moz-border-radius: 10px ;
@@ -77,3 +86,20 @@ code {
   -o-border-radius: 10px ;
 }
 
+.todoform label {
+  text-align: left;
+  display: block;
+}
+.todoform h2 {
+  font-size: 20px;
+  color: #8785A2;
+  margin-bottom: 30px;
+}
+.todoform input, .todoform select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
