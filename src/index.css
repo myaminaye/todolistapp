@@ -103,3 +103,11 @@ button:hover{
   box-sizing: border-box;
   display: block;
 }
+
+.progress-sign{
+  color: orange;
+}
+
+.completed-sign{
+  color: green;
+}

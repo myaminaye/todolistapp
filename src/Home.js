@@ -4,9 +4,9 @@ import ToDoForm from "./ToDoForm";
 
 const Home = () => {
     const [tasks, setTasks] = useState([
-        {taskName : 'Study React', dueDate : '23 September 2022', taskStatus: 'Orange', taskId : 1},
-        {taskName : 'Website development', dueDate : '17 August 2022', taskStatus: 'Green', taskId : 2},
-        {taskName : 'Write Report', dueDate : '12 September 2022', taskStatus: 'Orange', taskId : 3}
+        {taskName : 'Study React', dueDate : '23 September 2022', taskStatus: 'In Progress', taskId : 1},
+        {taskName : 'Website development', dueDate : '17 August 2022', taskStatus: 'Completed', taskId : 2},
+        {taskName : 'Write Report', dueDate : '12 September 2022', taskStatus: 'In Progress', taskId : 3}
     ])
 
     const handleDelete = (taskId) =>{
@@ -17,10 +17,10 @@ const Home = () => {
     return ( 
         <div className="home">
             <div className="col-6">
-                <TdList tasks={tasks} handleDelete={handleDelete} />
+                <TdList tasks={tasks} handleDelete={handleDelete}/>
             </div>
             <div className="col-6">
-                <ToDoForm tasks={tasks} setTasks={setTasks} />
+                <ToDoForm tasks={tasks} setTasks={setTasks}/>
             </div>
             
         </div>

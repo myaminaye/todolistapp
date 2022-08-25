@@ -1,21 +1,20 @@
 import { useState } from "react";
 
-const ToDoForm = (tasks, setTasks) => {
+const ToDoForm = ({tasks, setTasks}) => {
 
     const [taskName, setTaskName]= useState('');
     const [dueDate, setDueDate]= useState('');
-    const [taskStatus, setTaskStatus] = useState('Orange');
-    var id = 3;
+    const [taskStatus, setTaskStatus] = useState('Completed');
+    var taskId = tasks.length +1;
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        id++;
-        const task = {taskName, dueDate, taskStatus, id};
+        const task = {taskName, dueDate, taskStatus, taskId};
 
         console.log(task);
         console.log(tasks);
-        const newTasks = tasks.push(task);
-        setTasks = newTasks;
+        const newTasks = [...tasks, task];
+        setTasks(newTasks);
         console.log(newTasks);
        
     }
@@ -45,8 +44,8 @@ const ToDoForm = (tasks, setTasks) => {
                     value={taskStatus}
                     onChange={(e) => setTaskStatus(e.target.value)}
                 >
-                    <option value="orange">orange</option>
-                    <option value="green">green</option>
+                    <option value="inprogress">In progress</option>
+                    <option value="completed">Completed</option>
                 </select>
                 <button>Add Task</button>
             </form>
