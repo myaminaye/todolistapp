@@ -1,5 +1,4 @@
 const TdList = ({ tasks, handleDelete }) => {
-  const isCompleted = true;
 
   const taskComponent = (task) => {
     let color = "orange";

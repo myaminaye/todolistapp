@@ -16,7 +16,10 @@ const ToDoForm = ({tasks, setTasks}) => {
         const newTasks = [...tasks, task];
         setTasks(newTasks);
         console.log(newTasks);
-       
+        
+        setTaskName("");
+        setDueDate("");
+        setTaskStatus("");
     }
 
     return ( 
